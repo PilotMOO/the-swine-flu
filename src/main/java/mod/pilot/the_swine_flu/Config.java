@@ -28,6 +28,7 @@ public class Config
     public static class Server{
         public final ForgeConfigSpec.ConfigValue<Double> pig_damage;
         public final ForgeConfigSpec.ConfigValue<Double> pig_kb;
+        public final ForgeConfigSpec.ConfigValue<Integer> pig_searchrange;
 
         public final ForgeConfigSpec.ConfigValue<List<? extends String>> blacklisted_targets;
 
@@ -44,6 +45,7 @@ public class Config
             builder.push("Pig attack stats");
             this.pig_damage = builder.defineInRange("How much damage pigs deal", 4, 0, Double.MAX_VALUE);
             this.pig_kb = builder.defineInRange("How much knockback pigs deal", 0.25, 0, Double.MAX_VALUE);
+            this.pig_searchrange = builder.defineInRange("How far away pigs can target and follow", 64, 0, Integer.MAX_VALUE);
         }
     }
 

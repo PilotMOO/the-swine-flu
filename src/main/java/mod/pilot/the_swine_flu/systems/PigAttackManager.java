@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class PigAttackManager {
     private static final double pigDamage = Config.SERVER.pig_damage.get();
     private static final double pigKB = Config.SERVER.pig_kb.get();
+    public static final int pigSearchRange = Config.SERVER.pig_searchrange.get();
     public static boolean PigAttack(Pig pig, Entity target){
         float f = (float)pigDamage;
         float f1 = (float)pigKB;
